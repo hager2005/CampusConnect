@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusConnect - اكتشف فعاليات جامعتك وسجل في ورش العمل والأنشطة">
+  <title>CampusConnect | فعاليات جامعية أقرب إليك</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#" aria-label="CampusConnect الصفحة الرئيسية">
+        <span class="brand-mark"><span class="brand-cap"></span></span>
+        <span>Campus<span>Connect</span></span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links">
+        <a class="active" href="#events">الفعاليات</a>
+        <a href="#categories">التخصصات</a>
+        <a href="#about">عن المنصة</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button notification-button" type="button" aria-label="الإشعارات">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+          <span class="notification-dot"></span>
+        </button>
+        <button class="profile-button" type="button">
+          <span class="avatar">م</span>
+          <span>محمد أحمد</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">بوابتك لكل الفرص الجامعية</span>
+        <h1>اكتشف فعاليات جامعتك<br><span>بسهولة ومن مكان واحد</span></h1>
+        <p>ورش عمل، مسابقات، ندوات وأنشطة طلابية — كل الفرص التي تساعدك على تطوير مهاراتك بين يديك.</p>
+
+        <form class="search-bar" id="searchForm">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input id="searchInput" type="search" placeholder="ابحث عن فعالية أو ورشة..." autocomplete="off">
+          </label>
+          <label class="location-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <select id="locationFilter" aria-label="المكان">
+              <option value="all">كل الأماكن</option>
+              <option value="القاهرة">جامعة القاهرة</option>
+              <option value="عين شمس">جامعة عين شمس</option>
+              <option value="الإسكندرية">جامعة الإسكندرية</option>
+            </select>
+          </label>
+          <button class="search-button" type="submit">بحث</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="إحصائيات المنصة">
+      <div class="container stats-grid">
+        <div><strong>150+</strong><span>فعالية نشطة</span></div>
+        <div><strong>12</strong><span>جامعة ومؤسسة</span></div>
+        <div><strong>8,500+</strong><span>طالب مسجل</span></div>
+        <div><strong>95%</strong><span>رضا المشاركين</span></div>
+      </div>
+    </section>
+
+    <section class="categories section" id="categories">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">استكشف مجالات الاهتمام</span>
+          <h2>تصفح حسب المجال</h2>
+        </div>
+        <div class="category-grid">
+          <button class="category-card active" type="button" data-category="all">
+            <span class="category-icon grid-icon"><i></i><i></i><i></i><i></i></span>
+            <strong>الكل</strong><small>جميع الفعاليات</small>
+          </button>
+          <button class="category-card" type="button" data-category="تقنية">
+            <span class="category-icon blue"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+            <strong>تقنية وبرمجة</strong><small>12 فعالية</small>
+          </button>
+          <button class="category-card" type="button" data-category="ريادة الأعمال">
+            <span class="category-icon gold"><svg viewBox="0 0 24 24"><path d="M4 19V9l8-5 8 5v10"/><path d="M8 19v-6h8v6M12 9v2"/></svg></span>
+            <strong>ريادة الأعمال</strong><small>8 فعاليات</small>
+          </button>
+          <button class="category-card" type="button" data-category="إبداع">
+            <span class="category-icon purple"><svg viewBox="0 0 24 24"><path d="m12 3 2.2 4.5L19 8l-3.5 3.4.8 4.8-4.3-2.3-4.3 2.3.8-4.8L5 8l4.8-.5L12 3Z"/></svg></span>
+            <strong>فن وإبداع</strong><small>6 فعاليات</small>
+          </button>
+          <button class="category-card" type="button" data-category="تنمية">
+            <span class="category-icon green"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M8 13.5 11 16l5-8"/></svg></span>
+            <strong>تنمية ذاتية</strong><small>10 فعاليات</small>
+          </button>
+          <button class="category-card" type="button" data-category="علوم">
+            <span class="category-icon orange"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 8a3 3 0 0 0 2.6 4h8.8A3 3 0 0 0 19 17l-5-8V3"/><path d="M8 15h8"/></svg></span>
+            <strong>علوم وابتكار</strong><small>9 فعاليات</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="events section" id="events">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">لا تفوت الفرصة</span>
+            <h2>الفعاليات القادمة</h2>
+          </div>
+          <button class="outline-button" id="viewAll" type="button">عرض جميع الفعاليات <span>←</span></button>
+        </div>
+
+        <div class="event-grid" id="eventGrid">
+          <article class="event-card" data-category="تقنية" data-location="القاهرة" data-title="ذكاء اصطناعي وتعلم الآلة">
+            <div class="event-image ai-cover">
+              <div class="image-overlay"></div>
+              <span class="event-tag">تقنية وبرمجة</span>
+              <button class="save-button" type="button" aria-label="حفظ الفعالية"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
+            </div>
+            <div class="event-body">
+              <div class="date-row"><time><strong>18</strong><span>نوفمبر</span></time><div><h3>ذكاء اصطناعي وتعلم الآلة</h3><p>جامعة القاهرة - كلية الهندسة</p></div></div>
+              <div class="meta-row"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10:00 ص - 2:00 م</span><span><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>قاعة المؤتمرات</span></div>
+              <div class="card-footer"><div class="attendees"><span class="mini-avatar coral">س</span><span class="mini-avatar blue-avatar">ع</span><span class="mini-avatar green-avatar">أ</span><small>+42 مهتم</small></div><button class="register-button" type="button">سجل الآن</button></div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="ريادة الأعمال" data-location="عين شمس" data-title="ريادة الأعمال من الفكرة إلى السوق">
+            <div class="event-image startup-cover">
+              <div class="image-overlay"></div>
+              <span class="event-tag gold-tag">ريادة الأعمال</span>
+              <button class="save-button" type="button" aria-label="حفظ الفعالية"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
+            </div>
+            <div class="event-body">
+              <div class="date-row"><time><strong>22</strong><span>نوفمبر</span></time><div><h3>من الفكرة إلى السوق</h3><p>جامعة عين شمس - مركز ريادة الأعمال</p></div></div>
+              <div class="meta-row"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1:00 م - 4:30 م</span><span><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>قاعة الابتكار</span></div>
+              <div class="card-footer"><div class="attendees"><span class="mini-avatar coral">ن</span><span class="mini-avatar gold-avatar">ر</span><span class="mini-avatar blue-avatar">م</span><small>+28 مهتم</small></div><button class="register-button" type="button">سجل الآن</button></div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="تنمية" data-location="القاهرة" data-title="مهارات التواصل والعمل الجماعي">
+            <div class="event-image leadership-cover">
+              <div class="image-overlay"></div>
+              <span class="event-tag green-tag">تنمية ذاتية</span>
+              <button class="save-button" type="button" aria-label="حفظ الفعالية"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
+            </div>
+            <div class="event-body">
+              <div class="date-row"><time><strong>26</strong><span>نوفمبر</span></time><div><h3>مهارات التواصل والعمل الجماعي</h3><p>جامعة القاهرة - مركز تنمية الطلاب</p></div></div>
+              <div class="meta-row"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11:00 ص - 1:30 م</span><span><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>قاعة 204</span></div>
+              <div class="card-footer"><div class="attendees"><span class="mini-avatar purple-avatar">ل</span><span class="mini-avatar green-avatar">د</span><span class="mini-avatar coral">ي</span><small>+35 مهتم</small></div><button class="register-button" type="button">سجل الآن</button></div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState">لا توجد فعاليات مطابقة لبحثك.</p>
+      </div>
+    </section>
+
+    <section class="cta-section" id="about">
+      <div class="container cta-card">
+        <div>
+          <span>هل أنت مسؤول أنشطة طلابية؟</span>
+          <h2>أنشئ فعاليتك ووصلها لآلاف الطلاب</h2>
+        </div>
+        <button type="button" id="createEvent">أضف فعالية جديدة <span>+</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand" href="#"><span class="brand-mark"><span class="brand-cap"></span></span><span>Campus<span>Connect</span></span></a>
+      <p>منصة فرصك الجامعية الأولى</p>
+      <span>© 2026 CampusConnect</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
